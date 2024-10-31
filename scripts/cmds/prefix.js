@@ -3,13 +3,12 @@ const { utils } = global;
 
 module.exports = {
 	config: {
-		name: "prefix2",
-		version: "1.3",
+		name: "prefix",
+		version: "1.4",
 		author: "NTKhang",
 		countDown: 5,
-		role: 2,
-		shortDescription: "Thay đổi prefix của bot",
-		longDescription: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
+		role: 0,
+		description: "Thay đổi dấu lệnh của bot trong box chat của bạn hoặc cả hệ thống bot (chỉ admin bot)",
 		category: "config",
 		guide: {
 			vi: "   {pn} <new prefix>: thay đổi prefix mới trong box chat của bạn"
@@ -46,7 +45,7 @@ module.exports = {
 			confirmThisThread: "Please react to this message to confirm change prefix in your box chat",
 			successGlobal: "Changed prefix of system bot to: %1",
 			successThisThread: "Changed prefix in your box chat to: %1",
-			myPrefix: "🌐 System prefix: %1\n🛸 Your box chat prefix: %2"
+			myPrefix: "┏━━ [ Ꮇʀᵀᴬᴿᴵᶠ~𝙱𝙾𝚃~Ұ₮࿐ ]━━➣\n┃🚀 ʂყʂƚҽɱ ρɾҽϝιx: [ %1 ]\n┃🗿 ყσυɾ Ⴆσx ƈԋαƚ ρɾҽϝιx: [ %2 ]\n┗━━━━━━━━━━━━➢"
 		}
 	},
 
@@ -95,10 +94,16 @@ module.exports = {
 		}
 	},
 
-	onChat: async function ({ event, message, getLang }) {
-		if (event.body && event.body.toLowerCase() === "prefix2")
-			return () => {
-				return message.reply(getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)));
-			};
-	}
-};
+  onChat: async function ({ event, message, usersData, getLang }) {
+    const data = await usersData.get(event.senderID);
+    const name = data.name;
+    const xyrene = {
+      body: getLang("myPrefix", global.GoatBot.config.prefix, utils.getPrefix(event.threadID)),
+      attachment: await global.utils.getStreamFromURL("https://i.imgur.com/7CIvopM.gif")
+        };
+    if (event.body && event.body.toLowerCase() === "prefix")
+      return () => {
+        return message.reply(xyrene);
+      };
+  }
+  };

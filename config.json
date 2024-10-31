@@ -1,7 +1,9 @@
 {
+  "language": "en",
+  "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
   "facebookAccount": {
-    "email": "075j5d@rteet.com",
-    "password": "himi009",
+    "email": "",
+    "password": "",
     "2FASecret": "",
     "i_user": "",
     "proxy": null,
@@ -10,41 +12,103 @@
     "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
   },
   "antiInbox": false,
-  "language": "en",
-  "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
   "adminOnly": {
     "enable": false,
     "ignoreCommand": []
   },
+  "authorName": "TARIF",
+  "authorFB": "https://www.facebook.com/profile.php?id=100090111009775&mibextid=ZbWKwL",
+  "API": {
+    "DIPTO": "https://noobs-api.onrender.com/dipto",
+    "SAMIR": "https://apis-samir.onrender.com",
+    "RUBISH": "https://rubish-apihub.onrender.com/rubish"
+  },
+  "nickNameBot": "✑Ꮇʀᵀᴬᴿᴵᶠ~𝙱𝙾𝚃~Ұ₮࿐🪄👨🏿‍🌾",
+  "prefix": "!",
+  "vipUser": [
+    "61552422054139",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "orgDEV": [
+    "61552422054139",
+    "",
+    ""
+  ],
   "adminBot": [
-    "100065506668822"
+    "61552422054139",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "100081491574719"
+  ],
+  "rubishapi": "https://rubish-apihub.onrender.com/rubish",
+  "diptoapi": "https://d1pt0-call-bomber.onrender.com/dipto?",
+  "GOD": [
+    "61552422054139",
+    "",
+    "100081491574719"
+  ],
+  "DEV": [
+    "61552422054139",
+    "",
+    "",
+    ""
   ],
   "whiteListMode": {
     "enable": false,
-    "whiteListIds": [],
+    "whiteListIds": [
+      "61552422054139",
+      "",
+      "",
+      "100081491574719"
+    ],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "❁𝐁𝐀𝐘𝐉𝐈𝐃𓇽𝐊𝐎𝐎𝐊𝐈𝐄",
-  "prefix": ".",
+  "whiteListModeThread": {
+    "enable": false,
+    "whiteListThreadIds": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "100081491574719"
+    ],
+    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
+    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
+  },
   "database": {
-    "type": "sqlite",
+    "type": "json",
     "uriMongodb": "",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
     "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
   },
-  "timeZone": "Africa/Lagos",
+  "timeZone": "Asia/Dhaka",
   "credentials": {
     "gmailAccount": {
-      "email": "ilomikparaphael@gmail.com",
-      "clientId": "707976531024-j0h1m1r5lld2ck2eb0iss8pet8fkiu2g.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//0435VRKIR84KGCgYIARAAGAQSNwF-L9Irq-ndiTGzeY_17lETxH8ccgdXPLS8t9G3WDzioOirdR6kJXEdszdv3O1KFVoHv1r-l_U",
-      "apiKey": ""
+      "email": "hopbeta327@gmail.com",
+      "clientId": "933675314485-93jsi5cfchvh9799qbubdhplukenjs3d.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04gtlc86p5dtQCgYIARAAGAQSNwF-L9Ir9Bcnw3F1gpDxLRDh9pK5gPcqK5NqJJI7FfKUv8fvKpZxUTLwZOW4q2DnevGffBjixwM",
+      "apiKey": "AIzaSyC7TCAtIV8M_Zrm8YiCOwPcTFtPluYSv3w"
     },
     "gRecaptcha": {
-      "siteKey": "6LcMWCUqAAAAAKzK5DEfrW0mN71Lz1Ot_mU3mRXk",
-      "secretKey": "6LcMWCUqAAAAAMzJ4v_gN3K97cO7gEnZmbU87bT4"
+      "siteKey": "6Lco3eEpAAAAAJtrR-HkbLXI0ogBLUnIU737G3zI",
+      "secretKey": "6Lco3eEpAAAAAGd3SEsFSmlXXGB4hOqGq__ivD12"
     }
   },
   "dashBoard": {
@@ -53,26 +117,26 @@
     "port": 3001
   },
   "serverUptime": {
-    "enable": false,
+    "enable": true,
     "port": 3001,
     "socket": {
       "enable": true,
       "channelName": "uptime",
-      "verifyToken": ""
+      "verifyToken": "u1940319-ea7f101121162c69af48f6ce"
     }
   },
   "autoRestart": {
-    "time": 3600000,
+    "time": 18000000,
     "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
   },
   "autoUptime": {
-    "enable": false,
+    "enable": true,
     "timeInterval": 180,
-    "url": "",
+    "url": "https://uptimerobot.com/",
     "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
   },
   "autoLoadScripts": {
-    "enable": false,
+    "enable": true,
     "ignoreCmds": "",
     "ignoreEvents": "",
     "notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"
@@ -90,8 +154,8 @@
   "notiWhenListenMqttError": {
     "notes": "This is the message when the bot is listening to the mqtt server and the mqtt server stops working due to account problems such as: locked acc, blocked due to spam,... bot will automatically send notifications to parts of your settings. You must change enable to true to use this feature. See bot/login/handlerWhenListenHasError.js file for details on how it works",
     "gmail": {
-      "enable": false,
-      "emailGetNoti": "",
+      "enable": true,
+      "emailGetNoti": "yesiamjisan@gmail.com",
       "note": "Bot will use gmailAccount to send email to emailGetNoti, can send notifications to many email, separate by comma or space, example: \"example1@gmail.com example2@gmail.com\" (without backslash)"
     },
     "telegram": {
@@ -111,9 +175,10 @@
     "adminOnly": false,
     "threadBanned": false,
     "userBanned": false,
-    "needRoleToUseCmd": false,
-    "needRoleToUseCmdOnReply": false,
-    "needRoleToUseCmdOnReaction": false
+    "selflisten": false,
+    "whiteListMode": false,
+    "whiteListModeThread": false,
+    "needRoleToUseCmd": false
   },
   "logEvents": {
     "disableAll": false,
@@ -122,7 +187,7 @@
     "message_unsend": true,
     "message_reply": true,
     "event": true,
-    "read_receipt": false,
+    "read_receipt": true,
     "typ": false,
     "presence": false
   },
@@ -132,16 +197,10 @@
     "updatePresence": true,
     "listenTyping": true,
     "logLevel": "error",
-    "selfListen": false,
+    "selfListen": true,
     "selfListenEvent": true,
-    "autoMarkDelivery": false,
-    "autoReconnect": false,
+    "autoMarkDelivery": true,
+    "autoReconnect": true,
     "notes": "Document here: https://github.com/ntkhang03/fb-chat-api/blob/master/DOCS.md#apisetoptionsoptions "
-  },
-  "whiteListModeThread": {
-    "enable": false,
-    "whiteListThreadIds": [],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
   }
 }

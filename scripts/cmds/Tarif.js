@@ -12,7 +12,7 @@ module.exports = {
 
  onStart: async function(){}, 
  onChat: async function({ event, message, getLang }) {
- if (event.body && event.body.toLowerCase() === "bayjid") {
+ if (event.body && event.body.toLowerCase() === "tarif") {
  return message.reply({
  body: " 「 🥰❥︎----ღ᭄_ᴛʜɪs ʙᴏᴛ ..\n❥︎----ღ᭄_ᴍᴀᴋᴇ ʙʏ ❞࿐.🌴🤎🙂.\☞ 𝙈𝙍 𝙏𝘼𝙍𝙄𝙁 𝙔𝙩 ᴏᴋʜ ʙʏᴇ\n\n𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\✑𝙈𝙍 𝙏𝘼𝙍𝙄𝙁 𝙔𝙩」",
  attachment: await global.utils.getStreamFromURL("https://i.imgur.com/tKgVilB.mp4")

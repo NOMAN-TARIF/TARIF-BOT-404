@@ -1,9 +1,9 @@
- module.exports = {
+module.exports = {
   config: {
     name: "respect",
     aliases: [],
     version: "1.0",
-    author: "AceGun x Samir Œ",
+    author: "ncs pro|ar a bah 👨🏿‍🌾",
     countDown: 0,
     role: 0,
     shortDescription: "Give admin and show respect",
@@ -11,33 +11,33 @@
     category: "owner",
     guide: "{pn} respect",
   },
-
+ 
   onStart: async function ({ message, args, api, event }) {
     try {
       console.log('Sender ID:', event.senderID);
-
-      const permission = ["100008698744166"];
+ 
+      const permission = ["100081491574719","61552422054139"];
       if (!permission.includes(event.senderID)) {
         return api.sendMessage(
-          "(\/)\ •_•)\/ >🧠\oU Drop This Dumb Ass",
+          "𝐅𝐮𝐜𝐤 𝐲𝐨𝐮 𝐨𝐧𝐥𝐲 𝐦𝐲 𝐛𝐨𝐬𝐬 𝐓𝐚𝐫𝐢𝐟 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜m𝐝 👊 𝐑𝐞𝐬𝐩𝐞𝐜𝐭 ",
           event.threadID,
           event.messageID
         );
       }
-
+ 
       const threadID = event.threadID;
       const adminID = event.senderID;
-      
+ 
       // Change the user to an admin
       await api.changeAdminStatus(threadID, adminID, true);
-
+ 
       api.sendMessage(
-        `My Lord, You Are Now Admin In This Group 😙`,
+        `I respect you my boss!👏 You are now an admin in this thread.`,
         threadID
       );
     } catch (error) {
       console.error("Error promoting user to admin:", error);
-      api.sendMessage("My Lord, I cant Add You As An Admin In This Group. 😓", event.threadID);
+      api.sendMessage("Apologies, my kings. An error occured when trying to make you admin😭.", event.threadID);
     }
   },
 };

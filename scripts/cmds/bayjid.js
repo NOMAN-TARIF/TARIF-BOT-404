@@ -1,8 +1,8 @@
 module.exports = {
  config: {
-	 name: "bayjid",
+	 name: "Tarif",
 	 version: "1.0",
-	 author: "AceGun",
+	 author: "AceGun|ar a bah~👨🏿‍🌾",
 	 countDown: 5,
 	 role: 0,
 	 shortDescription: "no prefix",
@@ -14,8 +14,8 @@ module.exports = {
  onChat: async function({ event, message, getLang }) {
  if (event.body && event.body.toLowerCase() === "bayjid") {
  return message.reply({
- body: " 「 🥰❥︎----ღ᭄_ᴛʜɪs ʙᴏᴛ ..\n❥︎----ღ᭄_ᴍᴀᴋᴇ ʙʏ ❞࿐.🌴🤎🙂.\n❥ ᴍᴏʜᴀᴍᴍᴀᴅ ʙᴀʏᴊɪᴅ ᴏᴋʜ ʙʏᴇ\n\n𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\n𝐌𝐎𝐇𝐀𝐌𝐌𝐀𝐃 𝐁𝐀𝐘𝐉𝐈𝐃」",
- attachment: await global.utils.getStreamFromURL("https://i.imgur.com/LrJsvdk.mp4")
+ body: " 「 🥰❥︎----ღ᭄_ᴛʜɪs ʙᴏᴛ ..\n❥︎----ღ᭄_ᴍᴀᴋᴇ ʙʏ ❞࿐.🌴🤎🙂.\☞ 𝙈𝙍 𝙏𝘼𝙍𝙄𝙁 𝙔𝙩 ᴏᴋʜ ʙʏᴇ\n\n𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥\✑𝙈𝙍 𝙏𝘼𝙍𝙄𝙁 𝙔𝙩」",
+ attachment: await global.utils.getStreamFromURL("https://i.imgur.com/tKgVilB.mp4")
  });
  }
  }

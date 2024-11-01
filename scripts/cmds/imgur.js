@@ -1,23 +1,43 @@
-let axios = require("axios"); 
-module.exports = {
-  config: {
-    name: "imgur",
-    aliases: [`imagegur`],
-    version: "1.0",
-    author: "otiney",
-    countDown: 0,
-    role: 0,
-    shortDescription: "upload any images in imgur server..",
-    longDescription: "upload any images in imgur server..",
-    category: "utility",
-    guide: "{pn} reply or add link of image"
-  },
-
-  onStart: async function ({ api, event }) {
-    let linkanh = event.messageReply.attachments[0].url || args.join(" ");
-    if(!linkanh) return api.sendMessage('Please reply or enter the link 1 image!!!', event.threadID, event.messageID)
-    let res = await axios.get(`https://API-Web.miraiofficials123.repl.co/imgur?link=${encodeURIComponent(linkanh)}&apikey=18102004`);
-    let img = res.data.data;
-  return api.sendMessage(`${img}`, event.threadID, event.messageID)
-  }
+const axios = require("axios");
+const baseApiUrl = async () => {
+  const base = await axios.get(
+    `https://raw.githubusercontent.com/Blankid018/D1PT0/main/baseApiUrl.json`,
+  );
+  return base.data.api;
 };
+
+(module.exports.config = {
+  name: "imgur",
+  version: "6.9",
+  author: "dipto",
+  countDown: 5,
+  role: 0,
+  category: "media",
+  description: "convert image/video into Imgur link",
+  category: "tools",
+  usages: "reply [image, video]",
+}),
+  (module.exports.onStart = async function ({ api, event }) {
+    const dip = event.messageReply?.attachments[0]?.url;
+    if (!dip) {
+      return api.sendMessage(
+        "Please reply to an image or video.",
+        event.threadID,
+        event.messageID,
+      );
+    }
+    try {
+      const res = await axios.get(
+        `${await baseApiUrl()}/imgur?url=${encodeURIComponent(dip)}`,
+      );
+      const dipto = res.data.data;
+      api.sendMessage(dipto, event.threadID, event.messageID);
+    } catch (error) {
+      console.error(error);
+      return api.sendMessage(
+        "Failed to convert image or video into link.",
+        event.threadID,
+        event.messageID,
+      );
+    }
+  });
